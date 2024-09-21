@@ -1,4 +1,4 @@
-package se331.lab.entity;
+package se331.rest.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,11 +11,10 @@ import lombok.*;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class Event {
-     @Id
-     @GeneratedValue(strategy = GenerationType.IDENTITY)
-     @EqualsAndHashCode.Exclude
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Exclude
     Long id;
     String category;
     String title;
@@ -23,6 +22,6 @@ public class Event {
     String location;
     String date;
     String time;
-    Boolean petsAllowed;
+    Boolean petAllowed;
     String organizer;
 }
