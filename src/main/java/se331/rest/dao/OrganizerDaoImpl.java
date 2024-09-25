@@ -21,32 +21,32 @@ public class OrganizerDaoImpl implements OrganizerDao {
         organizerList.add(Organizer.builder()
                 .id(1L)
                 .organizationName("Kat Laydee")
-                .address("123 Feline Street, Meow Town")
+//                .address("123 Feline Street, Meow Town")
                 .build());
         organizerList.add(Organizer.builder()
                 .id(2L)
                 .organizationName("Fern Pollin")
-                .address("456 Flora Avenue, Flora City")
+//                .address("456 Flora Avenue, Flora City")
                 .build());
         organizerList.add(Organizer.builder()
                 .id(3L)
                 .organizationName("Carey Wales")
-                .address("789 Ocean Drive, Playa Del Carmen")
+//                .address("789 Ocean Drive, Playa Del Carmen")
                 .build());
         organizerList.add(Organizer.builder()
                 .id(4L)
                 .organizationName("Dawg Dahd")
-                .address("321 Woof Lane, Woof Town")
+//                .address("321 Woof Lane, Woof Town")
                 .build());
         organizerList.add(Organizer.builder()
                 .id(5L)
                 .organizationName("Kahn Opiner")
-                .address("654 Tin Street, Tin City")
+//                .address("654 Tin Street, Tin City")
                 .build());
         organizerList.add(Organizer.builder()
                 .id(6L)
                 .organizationName("Brody Kill")
-                .address("987 Highway 50, Rural Area")
+//                .address("987 Highway 50, Rural Area")
                 .build());
     }
 

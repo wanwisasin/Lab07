@@ -14,6 +14,7 @@ import se331.rest.repository.OrganizerRepository;
 public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
     final EventRepository eventRepository;
     final OrganizerRepository organizerRepository;
+
     @Override
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
         eventRepository.save(Event.builder()
@@ -24,39 +25,44 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .date("3rd Sept")
                 .time("3.00-4.00 pm.")
                 .petAllowed(false)
-                .organizer("CAMT").build());
+                .build());
+
         eventRepository.save(Event.builder()
                 .category("Academic")
                 .title("Commencement Day")
-                .description("A time for taking celebration")
+                .description("A time for celebration")
                 .location("CMU Convention hall")
-                .date("21th Jan")
+                .date("21st Jan")
                 .time("8.00am-4.00 pm.")
                 .petAllowed(false)
-                .organizer("CMU").build());
+                .build());
+
         eventRepository.save(Event.builder()
                 .category("Cultural")
                 .title("Loy Krathong")
                 .description("A time for Krathong")
                 .location("Ping River")
-                .date("21th Nov")
+                .date("21st Nov")
                 .time("8.00am-10.00 pm.")
                 .petAllowed(false)
-                .organizer("Chiang Mai").build());
+                .build());
+
         eventRepository.save(Event.builder()
                 .category("Cultural")
                 .title("Songkran")
                 .description("Let's Play Water")
                 .location("Chiang Mai Moat")
-                .date("13th Aprill")
+                .date("13th April")
                 .time("10.00am-6.00 pm.")
                 .petAllowed(true)
-                .organizer("Chiang Mai Municipality").build());
+                .build());
+
         organizerRepository.save(Organizer.builder()
                 .organizationName("CAMT")
-                .address("239 Huay Kaew Rd, Chiang Mai").build());
+                .build());
+
         organizerRepository.save(Organizer.builder()
                 .organizationName("Chiang Mai University")
-                .address("Chiang Mai").build());
+                .build());
     }
 }
