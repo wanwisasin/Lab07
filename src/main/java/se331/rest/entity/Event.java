@@ -2,7 +2,8 @@ package se331.rest.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
+import se331.rest.entity.Organizer;
+import se331.rest.entity.Participant;
 import java.util.List;
 
 @Data
@@ -14,7 +15,6 @@ public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Exclude
-
     Long id;
     String category;
     String title;

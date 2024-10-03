@@ -3,6 +3,7 @@ package se331.rest.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -11,12 +12,12 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Organizer {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Exclude
     Long id;
-    String organizationName;
-    @OneToMany
-    List<Event> ownEvents;
+    String name;
+    @OneToMany(mappedBy = "organizer")
+    @Builder.Default
+    List<Event> ownEvents = new ArrayList<>();
 }
